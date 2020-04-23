@@ -407,6 +407,15 @@ github.com/eapache/queue
 # github.com/eclipse/paho.mqtt.golang v1.2.1-0.20200121105743-0d940dd29fd2
 github.com/eclipse/paho.mqtt.golang
 github.com/eclipse/paho.mqtt.golang/packets
+# github.com/elastic/beats v7.6.2+incompatible
+github.com/elastic/beats/libbeat/beat
+github.com/elastic/beats/libbeat/common
+github.com/elastic/beats/libbeat/common/file
+github.com/elastic/beats/libbeat/common/reload
+github.com/elastic/beats/libbeat/feature
+github.com/elastic/beats/libbeat/logp
+github.com/elastic/beats/libbeat/management
+github.com/elastic/beats/libbeat/paths
 # github.com/elastic/ecs v1.5.0
 github.com/elastic/ecs/code/go/ecs
 # github.com/elastic/go-libaudit v0.4.0
@@ -605,6 +614,8 @@ github.com/jmoiron/sqlx
 github.com/jmoiron/sqlx/reflectx
 # github.com/joeshaw/multierror v0.0.0-20140124173710-69b34d4ec901
 github.com/joeshaw/multierror
+# github.com/joho/godotenv v1.3.0
+github.com/joho/godotenv
 # github.com/josephspurrier/goversioninfo v0.0.0-20190209210621-63e6d1acd3dd
 github.com/josephspurrier/goversioninfo
 # github.com/jpillora/backoff v1.0.0
