@@ -26,3 +26,7 @@ create-fileset: mage
 .PHONY: create-fields
 create-fields: mage
 	mage generate:fields
+
+.PHONY: package
+create-fields: mage
+	mage package

@@ -144,6 +144,10 @@ func CrossBuild(options ...CrossBuildOption) error {
 		if !buildPlatform.Flags.CanCrossBuild() {
 			return fmt.Errorf("unsupported cross build platform %v", buildPlatform.Name)
 		}
+		// if !strings.HasPrefix(buildPlatform.Name, "linux") || !strings.HasSuffix(buildPlatform.Name, "armv7") {
+		// 	fmt.Printf(">> [DEBUG] To skip building %v via %v\n", buildPlatform.Name, params.Target)
+		// 	continue
+		// }
 		builder := GolangCrossBuilder{buildPlatform.Name, params.Target, params.InDir, params.ImageSelector}
 		if params.Serial {
 			if err := builder.Build(); err != nil {
@@ -266,6 +270,7 @@ func (b GolangCrossBuilder) Build() error {
 
 	args = append(args,
 		"--rm",
+		"--env", "GOX_FLAGS=\"-arch amd64\"",
 		"--env", "MAGEFILE_VERBOSE="+verbose,
 		"--env", "MAGEFILE_TIMEOUT="+EnvOr("MAGEFILE_TIMEOUT", ""),
 		"--env", fmt.Sprintf("SNAPSHOT=%v", Snapshot),
